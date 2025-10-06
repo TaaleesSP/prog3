@@ -29,5 +29,6 @@ public class Ex1 {
             }
         }
         } while (continueLoop);
+        scanner.close();
     }
 }
