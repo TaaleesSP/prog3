@@ -55,6 +55,11 @@ public class Livro extends Item {
         );
     }
 
+    @Override
+    public String toCsvString() {
+        return String.join(",", "LIVRO", getTitulo(), getDescricao(), getAutor(), String.valueOf(getNumeroPaginas()), getDataCadastro().toString());
+    }
+
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cadastro de Livro");

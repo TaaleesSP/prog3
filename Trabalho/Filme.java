@@ -55,6 +55,11 @@ public class Filme extends Item {
         );
     }
 
+    @Override
+    public String toCsvString() {
+        return String.join(",", "FILME", getTitulo(), getDescricao(), getDiretor(), String.valueOf(getDuracaoMinutos()), getDataCadastro().toString());
+}
+
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Cadastro de Filme");
