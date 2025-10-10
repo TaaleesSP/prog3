@@ -2,7 +2,7 @@ package Trabalho;
 
 import javax.swing.SwingUtilities;
 
-public class Main {
+public class Inicio {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             new BibliotecaGUI().setVisible(true);
