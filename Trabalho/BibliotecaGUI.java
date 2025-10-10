@@ -270,4 +270,4 @@ public class BibliotecaGUI extends JFrame {
         txtDuracao.setText("");
         txtBusca.setText("");
     }
-} 
+}
