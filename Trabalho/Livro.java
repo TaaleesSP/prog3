@@ -1,7 +1,6 @@
 package Trabalho;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Livro extends Item {
     private String autor;
@@ -58,22 +57,5 @@ public class Livro extends Item {
     @Override
     public String toCsvString() {
         return String.join(",", "LIVRO", getTitulo(), getDescricao(), getAutor(), String.valueOf(getNumeroPaginas()), getDataCadastro().toString());
-    }
-
-    public static void main (String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Cadastro de Livro");
-        System.out.print("Digite o título do livro: ");
-        String titulo = scanner.nextLine();
-        System.out.print("Digite a descrição do livro: ");
-        String descricao = scanner.nextLine();
-        System.out.print("Digite o autor do livro: ");
-        String autor = scanner.nextLine();
-        System.out.print("Digite o número de páginas do livro: ");
-        int numeroPaginas = Integer.parseInt(scanner.nextLine());
-        LocalDate dataCadastro = LocalDate.now();
-        Livro livro = new Livro(titulo, descricao, autor, numeroPaginas, dataCadastro);
-        System.out.println(livro.exibirDetalhes());
-        scanner.close();
     }
 }

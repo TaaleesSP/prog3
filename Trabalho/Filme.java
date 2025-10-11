@@ -1,7 +1,6 @@
 package Trabalho;
 
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Filme extends Item {
     private String diretor;
@@ -58,22 +57,5 @@ public class Filme extends Item {
     @Override
     public String toCsvString() {
         return String.join(",", "FILME", getTitulo(), getDescricao(), getDiretor(), String.valueOf(getDuracaoMinutos()), getDataCadastro().toString());
-}
-
-    public static void main (String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Cadastro de Filme");
-        System.out.print("Digite o título do filme: ");
-        String titulo = scanner.nextLine();
-        System.out.print("Digite a descrição do filme: ");
-        String descricao = scanner.nextLine();
-        System.out.print("Digite o diretor do filme: ");
-        String diretor = scanner.nextLine();
-        System.out.print("Digite a duração do filme em minutos: ");
-        int duracaoMinutos = Integer.parseInt(scanner.nextLine());
-        LocalDate dataCadastro = LocalDate.now();
-        Filme filme = new Filme(titulo, descricao, diretor, duracaoMinutos, dataCadastro);
-        System.out.println(filme.exibirDetalhes());
-        scanner.close();
     }
 }

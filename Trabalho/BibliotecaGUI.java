@@ -1,4 +1,3 @@
-// Crie um novo arquivo chamado BibliotecaGUI.java e cole este conteúdo.
 package Trabalho;
 
 import javax.swing.*;
