@@ -19,7 +19,7 @@ public class BibliotecaGUI extends JFrame {
     private CardLayout cardLayout;
 
     public BibliotecaGUI() {
-        super("Biblioteca de Itens - Gerenciador de Livros e Filmes");
+        super("Biblioteca de Itens");
         this.gerenciador = new GerenciadorItens();
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
